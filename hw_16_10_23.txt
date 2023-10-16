@@ -1,0 +1,9 @@
+cd /opt/180923_evening/parshutin
+nano testscript.sh
+#!/bin/bash
+ echo -n "your name is: " && echo | whoami
+ echo -n "our working directory is: " && echo| pwd
+ echo -n "Number of users: "&& echo | ps -ef | grep ssh | wc -l
+ echo "done"
+chmod 744 testscript.sh
+./testscript.sh
